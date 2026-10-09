@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#09080b">
+  <title>Noite do Medo — 30 de outubro de 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+  <style>
+    :root{color-scheme:dark;--bg:#08080a;--panel:#141822;--line:rgba(255,255,255,.1);--blue:#3a75ff;--orange:#ff8a00;--red:#d81f26;--muted:#a0a0a8;--white:#eaeaea}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background-color:var(--bg);background-image:radial-gradient(1200px 600px at 50% -10%,rgba(216,31,38,.25),transparent 70%),radial-gradient(900px 500px at 50% 110%,rgba(216,31,38,.1),transparent 70%),url('https://i.postimg.cc/4yYQMCP7/Chat-GPT-Image-11-de-jul-de-2026-16-05-25.png');background-size:auto,auto,cover;background-position:center;background-attachment:fixed;background-repeat:no-repeat;color:var(--white);font-family:Inter,system-ui,sans-serif;min-height:100vh}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E")}
+    button,input{font:inherit}button{cursor:pointer}.wrap{width:min(1040px,calc(100% - 32px));margin:auto}.top{display:flex;justify-content:space-between;align-items:center;padding:24px 0}.brand{font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:#ded6d6}.admin-link{border:1px solid var(--line);background:#ffffff08;color:#eee;padding:9px 13px;border-radius:999px;font-size:12px}.hero{text-align:center;padding:62px 0 42px}.eyebrow{text-transform:uppercase;letter-spacing:.48em;color:#e5b1ae;font-size:11px}.hero h1{font-family:Creepster,Impact,cursive;font-size:clamp(64px,13vw,142px);line-height:.88;font-weight:400;letter-spacing:.035em;margin:24px auto;color:#f3e9e7;text-shadow:0 3px #5a1019,0 0 38px #d21b3666;max-width:900px}.hero p{color:#c7bdc0;line-height:1.8;max-width:570px;margin:24px auto}.meta{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:26px 0}.pill{padding:10px 15px;border:1px solid var(--line);background:#120f13d9;border-radius:999px;color:#e8dfe0;font-size:12px}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{border:0;border-radius:8px;padding:14px 21px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:12px}.primary{background:linear-gradient(135deg,#f78b32,#b91127);color:white;box-shadow:0 8px 35px #bd1a2c55}.ghost{background:#ffffff08;border:1px solid #ffffff30;color:#eee}.section{padding:28px 0 72px}.section h2{font-family:Creepster,cursive;font-size:38px;font-weight:400;letter-spacing:.08em}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}.card{background:linear-gradient(145deg,#1c171c,#100d11);border:1px solid var(--line);border-radius:12px;padding:20px;box-shadow:0 20px 60px #0005}.card h3{margin:0 0 8px;font-size:15px}.card p{font-size:13px;color:var(--muted);line-height:1.6}.price{font-size:24px;color:#ffa056;font-weight:800}.foot{border-top:1px solid var(--line);padding:24px 0 40px;color:#8e8589;font-size:12px;text-align:center}
+    .overlay{position:fixed;inset:0;z-index:5;background:#050407ed;backdrop-filter:blur(10px);display:none;overflow:auto;padding:22px}.overlay.show{display:grid;place-items:center}.dialog{width:min(760px,100%);max-height:94vh;overflow:auto;background:#151116;border:1px solid #95212d88;border-radius:14px;padding:clamp(20px,4vw,34px);box-shadow:0 0 55px #b5172850}.dialog.small{width:min(560px,100%)}.dialog-head{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:20px}.dialog-head h2{font-family:Creepster,cursive;font-size:30px;font-weight:400;color:#ff645e;margin:0}.x{background:none;border:0;color:#bbb;font-size:25px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:grid;gap:7px;margin-bottom:14px}.field label{font-size:12px;color:#c9bdc0}.field input{border:1px solid #ffffff25;background:#09080b;padding:12px;border-radius:7px;color:white}.choices{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.choice{background:#0d0b0f;border:1px solid #ffffff26;color:#eee;text-align:left;padding:15px;border-radius:8px}.choice.selected{border-color:#f05a47;box-shadow:0 0 0 1px #f05a47}.choice strong{display:block;margin-bottom:6px}.choice span{color:#f7a154;font-weight:800}.total{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:15px;margin:18px 0;font-weight:700}.notice{padding:12px;border-radius:7px;background:#ffffff0b;color:#c8bec0;font-size:13px;line-height:1.6;margin:12px 0}.error{color:#ff8d91}.success{color:#9ce2ad}.receipt-tickets{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}.ticket{background:#09080b;border:1px dashed #ca565f;border-radius:8px;padding:16px;text-align:center}.ticket .qr{display:grid;place-items:center;background:#fff;padding:8px;width:max-content;margin:12px auto}.admin-order{display:flex;justify-content:space-between;gap:14px;align-items:center;border-bottom:1px solid var(--line);padding:12px 0}.admin-order small{display:block;color:var(--muted);margin-top:5px}.scanner-box{min-height:220px}.hide{display:none!important}
+    @media(max-width:560px){.hero{padding-top:42px}.formgrid,.choices{grid-template-columns:1fr}.admin-order{align-items:flex-start;flex-direction:column}.top{padding:17px 0}.brand{font-size:10px;letter-spacing:.18em}}
+    body:before{background:linear-gradient(180deg,rgba(8,8,10,.8),rgba(8,8,10,.95) 60%,rgba(8,8,10,.995))}
+    .hero h1,.section h2,.dialog-head h2,.btn,.choice strong,.card h3{font-family:Oxanium,Inter,sans-serif}
+    .hero h1{font-weight:800;text-shadow:0 0 10px #d81f2690,0 0 40px #d21b3666}
+    .hero-logo{width:min(1100px,calc(100vw - 12px));max-height:500px}
+    .hero-logo{display:block;width:min(760px,100%);max-height:320px;object-fit:contain;margin:12px auto 22px;filter:drop-shadow(0 15px 38px #d81f2680)}
+    .primary{background:#fff;color:#111;box-shadow:0 8px 35px #ffffff36}
+    .price,.choice span{color:var(--orange)}.choice{border-color:#3a75ff66}.choice.selected{border-color:var(--orange);box-shadow:0 0 0 1px var(--orange)}
+    .dialog{background:#141822ed;border-color:#d81f2688;box-shadow:0 0 45px #ff8a0033;backdrop-filter:blur(18px)}
+    .dialog-head h2{font-size:24px;font-weight:800;text-transform:uppercase;color:#ef454b;text-shadow:0 0 14px #d81f2670}
+    #scan-result.scan-feedback{display:flex;min-height:230px;flex-direction:column;align-items:center;justify-content:center;gap:12px;margin:18px 0;padding:28px 16px;border:3px solid;border-radius:16px;text-align:center;font-family:Oxanium,Inter,sans-serif;animation:scan-pop .25s ease-out}
+    #scan-result.scan-feedback strong{font-size:clamp(42px,10vw,76px);line-height:1;font-weight:800;letter-spacing:.05em}
+    #scan-result.scan-feedback span{font-size:clamp(15px,3vw,22px);font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+    #scan-result.scan-feedback.approved{color:#b8ffd0;background:linear-gradient(145deg,#087a3d,#064d2c);border-color:#38ed83;box-shadow:0 0 34px #18ce6b88}
+    #scan-result.scan-feedback.rejected{color:#ffe0e1;background:linear-gradient(145deg,#a80e24,#590816);border-color:#ff5265;box-shadow:0 0 34px #ec203b88}
+    @keyframes scan-pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
+    .admin-link{position:fixed;right:22px;top:18px;z-index:4;font-family:Oxanium,Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+    #main-content{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:44px 20px}
+    .original-layout{width:100%;max-width:768px;text-align:center;margin:auto}
+    .hairline{height:1px;width:160px;margin:30px auto 0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent)}
+    .event-facts{display:grid;grid-template-columns:repeat(3,1fr);max-width:500px;margin:36px auto 0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:linear-gradient(180deg,rgba(20,20,24,.7),rgba(10,10,12,.82));backdrop-filter:blur(18px)}
+    .event-fact{display:flex;flex-direction:column;align-items:center;gap:6px;padding:18px 12px;border-left:1px solid var(--line)}.event-fact:first-child{border-left:0}
+    .event-fact small{font:10px Oxanium,Inter,sans-serif;letter-spacing:.3em;text-transform:uppercase;color:#ffffff80}.event-fact strong{font:700 18px Oxanium,Inter,sans-serif;color:#fff}
+    .original-info{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:64px;text-align:left}.original-info article{padding:20px;border:1px solid var(--line);border-radius:12px;background:linear-gradient(180deg,rgba(20,20,24,.7),rgba(10,10,12,.82));backdrop-filter:blur(18px)}.original-info h3{font:700 12px Oxanium,Inter,sans-serif;letter-spacing:.16em;text-transform:uppercase;margin:0 0 10px}.original-info p{font-size:13px;line-height:1.6;color:#ffffff9c;margin:0}
+    @media(max-width:620px){.original-info{grid-template-columns:1fr;margin-top:44px}.event-fact{padding:15px 6px}.event-fact strong{font-size:15px}.admin-link{right:12px;top:12px}}
+  </style>
+</head>
+<body>
+  <button class="admin-link" id="admin-open">Admin</button>
+  <main id="main-content"><section class="original-layout">
+    <div class="eyebrow">06 · Novembro · 2026</div>
+    <img class="hero-logo" src="https://i.postimg.cc/3wh9wc8V/oo.png" alt="Noite do Medo">
+    <div class="hairline"></div>
+    <p style="color:#ffffffb3;line-height:1.8;max-width:570px;margin:26px auto 0">Uma noite. Um convite. Uma travessia pelo desconhecido.<br>Garanta seu acesso antes que as vagas se esgotem.</p>
+    <div class="event-facts"><div class="event-fact"><small>Data</small><strong>06 · NOV</strong></div><div class="event-fact"><small>Início</small><strong>22H</strong></div><div class="event-fact"><small>Local</small><strong>GELA GUELA</strong></div></div>
+    <div class="actions" style="margin-top:36px"><button class="btn primary" id="buy-open">Garantir acesso&nbsp; →</button><a class="btn ghost" href="#info" style="text-decoration:none">Saiba mais</a></div>
+    <p style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#ffffff70;margin-top:22px">Ingressos a partir de R$ 10 · vagas limitadas</p>
+    <div id="info" class="original-info"><article><h3>Ingresso</h3><p>Acesso individual à experiência completa.<br><b class="price">R$ 10,00</b></p></article><article><h3>Casadinha</h3><p>Acesso para duas pessoas com desconto.<br><b class="price">R$ 17,00</b></p></article><article><h3>Local</h3><p>Gela Guela · Uauá/BA<br>Uma noite para atravessar o desconhecido.</p></article></div>
+  </section></main>
+
+  <div class="overlay" id="checkout"><section class="dialog"><div class="dialog-head"><h2>Reserve sua entrada</h2><button class="x" data-close="checkout" aria-label="Fechar">×</button></div><div id="checkout-stage">
+    <div class="formgrid"><div class="field"><label for="customer-name">Nome completo</label><input id="customer-name" autocomplete="name" required placeholder="Seu nome"></div><div class="field"><label for="customer-phone">Telefone / WhatsApp</label><input id="customer-phone" autocomplete="tel" required placeholder="(00) 00000-0000" maxlength="15"></div></div>
+    <h3>Ingresso</h3><div class="choices"><button class="choice selected" data-type="ingresso_1"><strong>1 ingresso</strong><span>R$ 10,00</span></button><button class="choice" data-type="casadinha"><strong>Casadinha · 2 ingressos</strong><span>R$ 17,00</span></button></div>
+    <h3>Pagamento</h3><div class="choices"><button class="choice selected" data-method="pix"><strong>PIX</strong><span>Pagamento antecipado</span></button></div>
+    <div class="notice">Ao continuar, você aceita as regras do evento. O QR do ingresso só fica válido depois que a organização confirmar o pagamento.</div><div class="total"><span>Total</span><span id="total">R$ 10,00</span></div><button class="btn primary" id="place-order" style="width:100%">Criar pedido</button><div id="checkout-error" class="notice error hide"></div>
+  </div><div id="receipt-stage" class="hide"></div></section></div>
+
+  <div class="overlay" id="admin"><section class="dialog"><div class="dialog-head"><h2>Portal da organização</h2><button class="x" data-close="admin" aria-label="Fechar">×</button></div><div id="admin-login"><div class="field"><label for="admin-password">Senha do administrador</label><input id="admin-password" type="password" autocomplete="current-password"></div><button class="btn primary" id="admin-signin">Entrar</button><div id="admin-error" class="notice error hide"></div></div><div id="admin-panel" class="hide"><div class="actions" style="justify-content:flex-start;margin:0 0 18px"><button class="btn ghost" id="refresh-orders">Atualizar pedidos</button><button class="btn ghost" id="start-scanner">Abrir câmera QR</button><button class="btn ghost" id="admin-signout">Sair</button></div><div id="scanner" class="scanner-box hide"></div><div id="scan-result" class="notice hide"></div><div id="orders-list"></div></div></section></div>
+  <div class="overlay" id="pix"><section class="dialog small"><div class="dialog-head"><h2>Pagamento PIX</h2><button class="x" data-close="pix">×</button></div><div id="pix-body"></div></section></div>
+  <script>
+    // Chave publicável do Supabase. Nunca coloque uma chave secret/service_role no navegador.
+    const SUPABASE_URL = 'https://kwvyffowjthqwmcwcqxj.supabase.co';
+    const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_XqaoX763YrweD5fowY0zBA_cNcJxLCd';
+    const EVENT = { whatsapp:'5534997086180', prices:{ingresso_1:1000,casadinha:1700}, labels:{ingresso_1:'1 ingresso',casadinha:'Casadinha · 2 ingressos'}, pix:{ingresso_1:{image:'https://i.postimg.cc/7h5cLJ9T/qr-code-10.png',code:'00020126580014BR.GOV.BCB.PIX01367f2f0d0a-836c-4e4f-a42c-c0d7547f3560520400005303986540510.005802BR5925Thiago Emanuel dos Santos6009SAO PAULO62140510dv9EufpGl66304246F'},casadinha:{image:'https://i.postimg.cc/bYGSPNP9/qr-code-17.png',code:'00020126580014BR.GOV.BCB.PIX01367f2f0d0a-836c-4e4f-a42c-c0d7547f3560520400005303986540517.005802BR5925Thiago Emanuel dos Santos6009SAO PAULO62140510OWPw1J2c596304F2C6'}}};
+    const client = window.supabase?.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY);
+    let ticketType='ingresso_1', paymentMethod='pix', qrScanner=null;
+    const el=id=>document.getElementById(id), money=cents=>'R$ '+(cents/100).toFixed(2).replace('.',',');
+    function show(id){el(id).classList.add('show')} function hide(id){el(id).classList.remove('show')}
+    document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>hide(b.dataset.close));
+    el('buy-open').onclick=()=>{el('checkout-stage').classList.remove('hide');el('receipt-stage').classList.add('hide');show('checkout')};
+    el('admin-open').onclick=()=>show('admin');
+    document.querySelectorAll('[data-type]').forEach(b=>b.onclick=()=>{ticketType=b.dataset.type;document.querySelectorAll('[data-type]').forEach(x=>x.classList.toggle('selected',x===b));el('total').textContent=money(EVENT.prices[ticketType])});
+    document.querySelectorAll('[data-method]').forEach(b=>b.onclick=()=>{paymentMethod=b.dataset.method;document.querySelectorAll('[data-method]').forEach(x=>x.classList.toggle('selected',x===b))});
+    el('customer-phone').addEventListener('input',e=>{let d=e.target.value.replace(/\D/g,'').slice(0,11);if(d.length>10)d=d.replace(/^(\d{2})(\d{5})(\d{4}).*/,'($1) $2-$3');else if(d.length>6)d=d.replace(/^(\d{2})(\d{4})(\d{0,4}).*/,'($1) $2-$3');else if(d.length>2)d=d.replace(/^(\d{2})(\d+)/,'($1) $2');e.target.value=d});
+    el('place-order').onclick=async()=>{const err=el('checkout-error');err.classList.add('hide');if(!client){err.textContent='Não foi possível carregar o Supabase. Verifique sua conexão com a internet.';err.classList.remove('hide');return}const name=el('customer-name').value.trim(),phone=el('customer-phone').value;if(name.length<2||phone.replace(/\D/g,'').length<10){err.textContent='Preencha seu nome e um telefone válido.';err.classList.remove('hide');return}const btn=el('place-order');btn.disabled=true;btn.textContent='Criando pedido…';try{const {data,error}=await client.rpc('noite_medo_create_order',{p_customer_name:name,p_customer_phone:phone,p_ticket_type:ticketType,p_payment_method:paymentMethod});if(error)throw error;const order=Array.isArray(data)?data[0]:data;if(!order?.receipt_secret)throw new Error('O banco não retornou o comprovante.');localStorage.setItem('noite_medo_receipt',order.receipt_secret);el('checkout-stage').classList.add('hide');const receipt=el('receipt-stage');receipt.classList.remove('hide');receipt.innerHTML=`<h3>Pedido criado</h3><p class="notice">Guarde este comprovante. O pedido está <b>aguardando confirmação do pagamento</b>. Código de acompanhamento: <code>${order.receipt_secret}</code></p>${paymentMethod==='pix'?`<button class="btn primary" id="show-pix">Ver PIX de ${money(order.amount_cents)}</button>`:''}<div id="receipt-content" class="notice">Assim que o pagamento for confirmado pela organização, os seus ingressos QR aparecerão aqui.</div><button class="btn ghost" id="check-receipt">Atualizar comprovante</button>`;if(paymentMethod==='pix')el('show-pix').onclick=()=>showPix(ticketType);el('check-receipt').onclick=()=>loadReceipt(order.receipt_secret);await loadReceipt(order.receipt_secret)}catch(e){err.textContent=e.message||'Não foi possível criar o pedido.';err.classList.remove('hide')}finally{btn.disabled=false;btn.textContent='Criar pedido'}};
+    function showPix(type){const p=EVENT.pix[type];el('pix-body').innerHTML=`<p>Confira o valor antes de pagar: <b>${money(EVENT.prices[type])}</b></p><img src="${p.image}" alt="QR Code PIX" style="width:min(280px,100%);display:block;margin:15px auto;background:white;padding:8px;border-radius:8px"><label class="field">PIX Copia e Cola<input id="pix-code" readonly value="${p.code}"></label><button class="btn primary" id="copy-pix">Copiar código PIX</button><p class="notice">Depois de pagar, aguarde a confirmação da organização. O comprovante do pedido fica nesta página.</p>`;show('pix');el('copy-pix').onclick=async()=>{try{await navigator.clipboard.writeText(p.code);el('copy-pix').textContent='Copiado!'}catch{el('pix-code').select();document.execCommand('copy');el('copy-pix').textContent='Copiado!'}}}
+    async function loadReceipt(secret){const target=el('receipt-content');if(!target)return;try{const {data,error}=await client.rpc('noite_medo_get_receipt',{p_receipt_secret:secret});if(error)throw error;const row=(data||[]).find(x=>x.ticket_token);if(!row){target.innerHTML='Pedido aguardando confirmação de pagamento.';return}const tickets=data.filter(x=>x.ticket_token);target.innerHTML='<h3>Ingresso confirmado</h3><div class="receipt-tickets">'+tickets.map((t,i)=>`<article class="ticket"><b>Ingresso ${i+1}</b><div class="qr" id="ticket-qr-${i}"></div><small>${t.redeemed_at?'Já utilizado':'Apresente este QR na entrada'}</small><div><code>${t.ticket_token}</code></div></article>`).join('')+'</div>';tickets.forEach((t,i)=>new QRCode(el('ticket-qr-'+i),{text:t.ticket_token,width:150,height:150,correctLevel:QRCode.CorrectLevel.M}))}catch(e){target.textContent='Não foi possível atualizar o comprovante: '+e.message}}
+    el('admin-signin').onclick=async()=>{const msg=el('admin-error');msg.classList.add('hide');try{const {error}=await client.auth.signInWithPassword({email:el('admin-email').value,password:el('admin-password').value});if(error)throw error;const {data}=await client.auth.getSession();if(data.session?.user?.app_metadata?.role!=='admin')throw new Error('Conta sem permissão de administradora.');el('admin-login').classList.add('hide');el('admin-panel').classList.remove('hide');await loadOrders()}catch(e){await client.auth.signOut();msg.textContent=e.message;msg.classList.remove('hide')}};
+    el('admin-signout').onclick=async()=>{await client.auth.signOut();el('admin-panel').classList.add('hide');el('admin-login').classList.remove('hide');el('scanner').classList.add('hide')};
+    el('refresh-orders').onclick=loadOrders;
+    async function loadOrders(){const list=el('orders-list');list.textContent='Carregando pedidos…';const {data,error}=await client.from('noite_medo_orders').select('id,customer_name,customer_phone,ticket_type,amount_cents,payment_method,status,created_at').order('created_at',{ascending:false});if(error){list.innerHTML=`<p class="notice error">${error.message}</p>`;return}if(!data.length){list.innerHTML='<p class="notice">Nenhum pedido recebido ainda.</p>';return}list.innerHTML=data.map(o=>`<div class="admin-order"><div><b>${o.customer_name} · ${EVENT.labels[o.ticket_type]}</b><small>${o.customer_phone} · ${money(o.amount_cents)} · ${o.payment_method.toUpperCase()} · ${o.status}</small></div>${o.status==='pending'?`<button class="btn primary" data-approve="${o.id}">Confirmar pagamento</button>`:''}</div>`).join('');list.querySelectorAll('[data-approve]').forEach(b=>b.onclick=async()=>{b.disabled=true;const {error}=await client.rpc('noite_medo_approve_order',{p_order_id:b.dataset.approve});if(error)alert(error.message);await loadOrders()})}
+    el('start-scanner').onclick=async()=>{const box=el('scanner');box.classList.remove('hide');el('scan-result').classList.add('hide');try{if(!qrScanner)qrScanner=new Html5QrcodeScanner('scanner',{fps:10,qrbox:{width:240,height:240},rememberLastUsedCamera:true},false);qrScanner.render(async(decoded)=>{const token=decoded.trim().match(/[0-9a-f]{8}-[0-9a-f-]{27,}/i)?.[0]||decoded.trim();await qrScanner.pause(true);const {data,error}=await client.rpc('noite_medo_redeem_ticket',{p_token:token});const out=el('scan-result');out.classList.remove('hide');out.textContent=error?'Erro: '+error.message:data==='valid'?'✅ INGRESSO VÁLIDO — entrada liberada.':data==='already_used'?'⛔ JÁ UTILIZADO — não aprovar novamente.':'❌ INGRESSO INVÁLIDO.';out.className='notice '+(data==='valid'?'success':'error');setTimeout(()=>qrScanner?.resume(),2200)},()=>{});}catch(e){const out=el('scan-result');out.classList.remove('hide');out.textContent='Não consegui abrir a câmera: '+e.message}}
+    const saved=localStorage.getItem('noite_medo_receipt');if(saved){el('buy-open').textContent='Ver meu comprovante';el('buy-open').onclick=()=>{el('checkout-stage').classList.add('hide');el('receipt-stage').classList.remove('hide');el('receipt-stage').innerHTML='<h3>Seu comprovante</h3><div id="receipt-content" class="notice">Carregando…</div><button class="btn ghost" id="check-receipt">Atualizar comprovante</button>';el('check-receipt').onclick=()=>loadReceipt(saved);show('checkout');loadReceipt(saved)}}
+  </script>
+  <script>
+    // Fluxo solicitado: somente PIX; a equipe confere o comprovante no WhatsApp,
+    // aprova no painel e então envia ao comprador o link do ingresso individual.
+    paymentMethod='pix';
+    el('place-order').onclick=async()=>{
+      const err=el('checkout-error');err.classList.add('hide');
+      const name=el('customer-name').value.trim(),phone=el('customer-phone').value;
+      if(name.length<2||phone.replace(/\D/g,'').length<10){err.textContent='Preencha seu nome e um telefone válido.';err.classList.remove('hide');return}
+      const btn=el('place-order');btn.disabled=true;btn.textContent='Criando pedido PIX…';
+      try{
+        const {data,error}=await client.rpc('noite_medo_create_order',{p_customer_name:name,p_customer_phone:phone,p_ticket_type:ticketType,p_payment_method:'pix'});
+        if(error)throw error;const order=Array.isArray(data)?data[0]:data;if(!order?.receipt_secret)throw new Error('O banco não retornou o comprovante.');
+        localStorage.setItem('noite_medo_receipt',order.receipt_secret);
+        el('checkout-stage').classList.add('hide');const receipt=el('receipt-stage');receipt.classList.remove('hide');
+        const msg=`Olá! Fiz um pedido para a Noite do Medo 2026.\nPedido: ${order.order_id}\nIngresso: ${EVENT.labels[ticketType]}\nValor: ${money(order.amount_cents)}\nNome: ${name}\nTelefone: ${phone}\nEstou enviando o comprovante PIX para conferência e liberação do ingresso.`;
+        receipt.innerHTML=`<h3>Pedido PIX criado</h3><div class="notice">Pague <b>${money(order.amount_cents)}</b> usando o PIX. Depois, toque no botão abaixo para enviar o comprovante ao administrador. O ingresso QR será gerado e enviado após a conferência.</div><button class="btn primary" id="show-pix">Ver QR e código PIX</button><a class="btn primary" style="display:block;text-align:center;text-decoration:none;margin-top:12px" target="_blank" rel="noopener" href="https://wa.me/${EVENT.whatsapp}?text=${encodeURIComponent(msg)}">Enviar comprovante pelo WhatsApp</a><div id="receipt-content" class="notice">Aguardando confirmação do pagamento.</div><button class="btn ghost" id="check-receipt">Atualizar pedido</button>`;
+        el('show-pix').onclick=()=>showPix(ticketType);el('check-receipt').onclick=()=>loadReceipt(order.receipt_secret);await loadReceipt(order.receipt_secret);
+      }catch(e){err.textContent=e.message||'Não foi possível criar o pedido.';err.classList.remove('hide')}
+      finally{btn.disabled=false;btn.textContent='Criar pedido'}
+    };
+    async function openReceiptPage(secret){
+      localStorage.setItem('noite_medo_receipt',secret);el('checkout-stage').classList.add('hide');
+      el('receipt-stage').classList.remove('hide');el('receipt-stage').innerHTML='<h3>Comprovante do ingresso</h3><div id="receipt-content" class="notice">Carregando pedido…</div><button class="btn ghost" id="check-receipt">Atualizar pedido</button>';
+      el('check-receipt').onclick=()=>loadReceipt(secret);show('checkout');await loadReceipt(secret);
+    }
+    const sharedReceipt=new URLSearchParams(location.search).get('pedido');
+    if(sharedReceipt){openReceiptPage(sharedReceipt);el('buy-open').textContent='Ver meu ingresso';el('buy-open').onclick=()=>openReceiptPage(sharedReceipt)}
+    loadOrders=async function(){
+      const list=el('orders-list');list.textContent='Carregando pedidos…';
+      const {data,error}=await client.from('noite_medo_orders').select('id,receipt_secret,customer_name,customer_phone,ticket_type,amount_cents,status,created_at').order('created_at',{ascending:false});
+      if(error){list.innerHTML=`<p class="notice error">${error.message}</p>`;return}if(!data.length){list.innerHTML='<p class="notice">Nenhum pedido recebido ainda.</p>';return}
+      list.innerHTML=data.map(o=>{const phone=o.customer_phone.startsWith('55')?o.customer_phone:'55'+o.customer_phone;const receiptUrl=new URL(location.href);receiptUrl.search='';receiptUrl.searchParams.set('pedido',o.receipt_secret);const message=`Olá, ${o.customer_name}! Seu pagamento foi confirmado. Aqui está seu ingresso individual da Noite do Medo: ${receiptUrl.href}`;return `<div class="admin-order"><div><b>${o.customer_name} · ${EVENT.labels[o.ticket_type]}</b><small>${o.customer_phone} · ${money(o.amount_cents)} · PIX · ${o.status}<br>Pedido: ${o.id}</small></div>${o.status==='pending'?`<button class="btn primary" data-approve="${o.id}">Confirmar PIX e gerar ingresso</button>`:o.status==='paid'?`<a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/${phone}?text=${encodeURIComponent(message)}">Enviar ingresso pelo WhatsApp</a>`:''}</div>`}).join('');
+      list.querySelectorAll('[data-approve]').forEach(b=>b.onclick=async()=>{b.disabled=true;const {error}=await client.rpc('noite_medo_approve_order',{p_order_id:b.dataset.approve});if(error)alert(error.message);await loadOrders()});
+    };
+  </script>
+  <script>
+    // Admin autenticado por senha validada no banco; a senha não está no bundle público.
+    let adminPassword='';
+    async function adminLoadOrders(){
+      const list=el('orders-list');list.textContent='Carregando pedidos…';
+      const {data,error}=await client.rpc('noite_medo_admin_orders',{p_password:adminPassword});
+      if(error){list.innerHTML=`<p class="notice error">${error.message}</p>`;return}
+      if(!data?.length){list.innerHTML='<p class="notice">Nenhum pedido recebido ainda.</p>';return}
+      list.innerHTML=data.map(o=>{const phone=o.customer_phone.startsWith('55')?o.customer_phone:'55'+o.customer_phone;const receiptUrl=new URL(location.href);receiptUrl.search='';receiptUrl.searchParams.set('pedido',o.receipt_secret);const message=`Olá, ${o.customer_name}! Seu PIX foi confirmado. Aqui está seu ingresso da Noite do Medo: ${receiptUrl.href}`;return `<div class="admin-order"><div><b>${o.customer_name} · ${EVENT.labels[o.ticket_type]}</b><small>${o.customer_phone} · ${money(o.amount_cents)} · PIX · ${o.status}<br>Pedido: ${o.id}</small></div>${o.status==='pending'?`<button class="btn primary" data-approve="${o.id}">Confirmar PIX e gerar QR</button>`:o.status==='paid'?`<a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/${phone}?text=${encodeURIComponent(message)}">Enviar ingresso pelo WhatsApp</a>`:''}</div>`}).join('');
+      list.querySelectorAll('[data-approve]').forEach(b=>b.onclick=async()=>{b.disabled=true;const {error}=await client.rpc('noite_medo_approve_order',{p_order_id:b.dataset.approve,p_password:adminPassword});if(error)alert(error.message);await adminLoadOrders()});
+    }
+    el('admin-signin').onclick=async()=>{const msg=el('admin-error');msg.classList.add('hide');const password=el('admin-password').value;if(!password){msg.textContent='Digite a senha.';msg.classList.remove('hide');return}adminPassword=password;const {data,error}=await client.rpc('noite_medo_admin_orders',{p_password:adminPassword});if(error){adminPassword='';el('admin-password').value='';msg.textContent='Supabase: '+error.message;msg.classList.remove('hide');return}el('admin-password').value='';el('admin-login').classList.add('hide');el('admin-panel').classList.remove('hide');adminLoadOrders()};
+    el('refresh-orders').onclick=adminLoadOrders;
+    el('admin-signout').onclick=async()=>{adminPassword='';el('admin-panel').classList.add('hide');el('admin-login').classList.remove('hide');el('admin-password').value='';el('scanner').classList.add('hide');try{if(qrScanner)await qrScanner.clear()}catch{}qrScanner=null};
+    el('start-scanner').onclick=async()=>{const box=el('scanner');box.classList.remove('hide');const result=el('scan-result');result.classList.add('hide');try{if(qrScanner)await qrScanner.clear();qrScanner=new Html5QrcodeScanner('scanner',{fps:10,qrbox:{width:240,height:240},rememberLastUsedCamera:true},false);qrScanner.render(async(decoded)=>{const token=decoded.trim().match(/[0-9a-f]{8}-[0-9a-f-]{27,}/i)?.[0]||decoded.trim();await qrScanner.pause(true);const {data,error}=await client.rpc('noite_medo_redeem_ticket',{p_token:token,p_password:adminPassword});result.classList.remove('hide');result.textContent=error?'Erro: '+error.message:data==='valid'?'✅ INGRESSO VÁLIDO — entrada liberada.':data==='already_used'?'⛔ JÁ UTILIZADO — não aprovar novamente.':'❌ INGRESSO INVÁLIDO.';result.className='notice '+(data==='valid'?'success':'error');setTimeout(()=>qrScanner?.resume(),2200)},()=>{})}catch(e){result.classList.remove('hide');result.textContent='Não foi possível abrir a câmera: '+e.message}};
+  </script>
+  <script>
+    // Mantém a chamada principal de compra, mesmo quando há um comprovante salvo no navegador.
+    el('buy-open').textContent='Garantir acesso';
+    el('buy-open').onclick=()=>{el('checkout-stage').classList.remove('hide');el('receipt-stage').classList.add('hide');show('checkout')};
+  </script>
+  <script>
+    el('start-scanner').onclick=async()=>{
+      const box=el('scanner'),result=el('scan-result');box.classList.remove('hide');result.classList.add('hide');
+      try{
+        if(qrScanner)await qrScanner.clear();
+        qrScanner=new Html5QrcodeScanner('scanner',{fps:10,qrbox:{width:240,height:240},rememberLastUsedCamera:true},false);
+        qrScanner.render(async(decoded)=>{
+          const token=decoded.trim().match(/[0-9a-f]{8}-[0-9a-f-]{27,}/i)?.[0]||decoded.trim();
+          await qrScanner.pause(true);
+          const {data,error}=await client.rpc('noite_medo_redeem_ticket',{p_token:token,p_password:adminPassword});
+          const approved=!error&&data==='valid';
+          result.classList.remove('hide');result.className='scan-feedback '+(approved?'approved':'rejected');result.setAttribute('role','alert');
+          result.innerHTML=approved?'<strong>APROVADO</strong><span>Ingresso válido · entrada liberada</span>':`<strong>NÃO APROVADO</strong><span>${error?'Falha ao validar o ingresso':data==='already_used'?'Este ingresso já foi utilizado':'Ingresso inválido'}</span>`;
+          setTimeout(()=>qrScanner?.resume(),2800);
+        },()=>{});
+      }catch(e){result.classList.remove('hide');result.className='scan-feedback rejected';result.innerHTML='<strong>NÃO APROVADO</strong><span>Não foi possível abrir a câmera</span>'}
+    };
+  </script>
+</body>
+</html>
