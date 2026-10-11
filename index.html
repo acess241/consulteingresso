@@ -52,13 +52,13 @@
     <div class="hairline"></div>
     <p style="color:#ffffffb3;line-height:1.8;max-width:570px;margin:26px auto 0">Uma noite. Um convite. Uma travessia pelo desconhecido.<br>Garanta seu acesso antes que as vagas se esgotem.</p>
     <div class="event-facts"><div class="event-fact"><small>Data</small><strong>06 · NOV</strong></div><div class="event-fact"><small>Início</small><strong>22H</strong></div><div class="event-fact"><small>Local</small><strong>GELA GUELA</strong></div></div>
-    <div class="actions" style="margin-top:36px"><button class="btn primary" id="buy-open">Garantir acesso&nbsp; →</button><a class="btn ghost" href="#info" style="text-decoration:none">Saiba mais</a></div>
+    <div class="actions" style="margin-top:36px"><button class="btn primary" id="buy-open">Garantir acesso&nbsp; →</button><button class="btn ghost" id="terms-open" type="button">Termos da compra</button><a class="btn ghost" href="#info" style="text-decoration:none">Saiba mais</a></div>
     <p style="font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#ffffff70;margin-top:22px">Ingressos a partir de R$ 10 · vagas limitadas</p>
     <div id="info" class="original-info"><article><h3>Ingresso</h3><p>Acesso individual à experiência completa.<br><b class="price">R$ 10,00</b></p></article><article><h3>Casadinha</h3><p>Acesso para duas pessoas com desconto.<br><b class="price">R$ 17,00</b></p></article><article><h3>Local</h3><p>Gela Guela · Uauá/BA<br>Uma noite para atravessar o desconhecido.</p></article></div>
   </section></main>
 
   <div class="overlay" id="checkout"><section class="dialog"><div class="dialog-head"><h2>Reserve sua entrada</h2><button class="x" data-close="checkout" aria-label="Fechar">×</button></div><div id="checkout-stage">
-    <div class="formgrid"><div class="field"><label for="customer-name">Nome completo</label><input id="customer-name" autocomplete="name" required placeholder="Seu nome"></div><div class="field"><label for="customer-phone">Telefone / WhatsApp</label><input id="customer-phone" autocomplete="tel" required placeholder="(00) 00000-0000" maxlength="15"></div></div>
+    <div class="formgrid"><div class="field"><label for="customer-name">Nome completo</label><input id="customer-name" autocomplete="name" required placeholder="Seu nome"></div><div class="field"><label for="customer-phone">Telefone / WhatsApp</label><input id="customer-phone" autocomplete="off" inputmode="tel" required placeholder="DDD + telefone" maxlength="15"></div></div>
     <h3>Ingresso</h3><div class="choices"><button class="choice selected" data-type="ingresso_1"><strong>1 ingresso</strong><span>R$ 10,00</span></button><button class="choice" data-type="casadinha"><strong>Casadinha · 2 ingressos</strong><span>R$ 17,00</span></button></div>
     <h3>Pagamento</h3><div class="choices"><button class="choice selected" data-method="pix"><strong>PIX</strong><span>Pagamento antecipado</span></button></div>
     <div class="notice">O QR do ingresso só fica válido depois que a organização confirmar o pagamento.</div>
@@ -81,6 +81,7 @@
     function show(id){el(id).classList.add('show')} function hide(id){el(id).classList.remove('show')}
     document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>hide(b.dataset.close));
      el('terms-toggle').onclick=()=>{const content=el('terms-content'),expanded=el('terms-toggle').getAttribute('aria-expanded')==='true';content.classList.toggle('hide',expanded);el('terms-toggle').setAttribute('aria-expanded',String(!expanded));el('terms-toggle').textContent=expanded?'Ler termos da compra':'Ocultar termos'};
+     el('terms-open').onclick=()=>{el('checkout-stage').classList.remove('hide');el('receipt-stage').classList.add('hide');show('checkout');el('terms-content').classList.remove('hide');el('terms-toggle').setAttribute('aria-expanded','true');el('terms-toggle').textContent='Ocultar termos'};
     el('buy-open').onclick=()=>{el('checkout-stage').classList.remove('hide');el('receipt-stage').classList.add('hide');show('checkout')};
     el('admin-open').onclick=()=>show('admin');
     document.querySelectorAll('[data-type]').forEach(b=>b.onclick=()=>{ticketType=b.dataset.type;document.querySelectorAll('[data-type]').forEach(x=>x.classList.toggle('selected',x===b));el('total').textContent=money(EVENT.prices[ticketType])});
