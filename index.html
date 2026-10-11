@@ -33,6 +33,7 @@
     #scan-result.scan-feedback.rejected{color:#ffe0e1;background:linear-gradient(145deg,#a80e24,#590816);border-color:#ff5265;box-shadow:0 0 34px #ec203b88}
     @keyframes scan-pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
     .admin-link{position:fixed;right:22px;top:18px;z-index:4;font-family:Oxanium,Inter,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+    .terms-actions{margin:14px 0 8px}.terms-button{padding:10px 14px;border-radius:7px;border:1px solid #ffffff30;background:#ffffff08;color:#eee;font-size:12px;font-weight:700}.terms-copy{margin:10px 0}.terms-copy h3{margin:0 0 10px;font:700 14px Oxanium,Inter,sans-serif;color:#fff}.terms-copy p{margin:8px 0}.terms-accept{display:flex;align-items:flex-start;gap:9px;margin:14px 0;color:#e5dfe1;font-size:13px;line-height:1.5;cursor:pointer}.terms-accept input{width:17px;height:17px;margin:1px 0 0;accent-color:#ff8a00;flex:0 0 auto}
     #main-content{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:44px 20px}
     .original-layout{width:100%;max-width:768px;text-align:center;margin:auto}
     .hairline{height:1px;width:160px;margin:30px auto 0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent)}
@@ -60,7 +61,11 @@
     <div class="formgrid"><div class="field"><label for="customer-name">Nome completo</label><input id="customer-name" autocomplete="name" required placeholder="Seu nome"></div><div class="field"><label for="customer-phone">Telefone / WhatsApp</label><input id="customer-phone" autocomplete="tel" required placeholder="(00) 00000-0000" maxlength="15"></div></div>
     <h3>Ingresso</h3><div class="choices"><button class="choice selected" data-type="ingresso_1"><strong>1 ingresso</strong><span>R$ 10,00</span></button><button class="choice" data-type="casadinha"><strong>Casadinha · 2 ingressos</strong><span>R$ 17,00</span></button></div>
     <h3>Pagamento</h3><div class="choices"><button class="choice selected" data-method="pix"><strong>PIX</strong><span>Pagamento antecipado</span></button></div>
-    <div class="notice">Ao continuar, você aceita as regras do evento. O QR do ingresso só fica válido depois que a organização confirmar o pagamento.</div><div class="total"><span>Total</span><span id="total">R$ 10,00</span></div><button class="btn primary" id="place-order" style="width:100%">Criar pedido</button><div id="checkout-error" class="notice error hide"></div>
+    <div class="notice">O QR do ingresso só fica válido depois que a organização confirmar o pagamento.</div>
+    <div class="terms-actions"><button class="terms-button" id="terms-toggle" type="button" aria-expanded="false" aria-controls="terms-content">Ler termos da compra</button></div>
+    <div class="notice terms-copy hide" id="terms-content" aria-labelledby="terms-toggle"><h3>Termos de compra do ingresso</h3><p><b>Idade para entrada:</b> A entrada é permitida para pessoas com 15 anos ou mais. No acesso ao evento, poderá ser solicitado um documento oficial com foto.</p><p><b>Bebidas alcoólicas:</b> A venda e o consumo de bebidas alcoólicas são permitidos somente para maiores de 18 anos. Será obrigatória a apresentação de documento oficial com foto que comprove a idade.</p><p><b>Uso do ingresso:</b> O ingresso dá acesso ao evento na data, horário e local informados no site. Apresente o ingresso válido na entrada e guarde-o até o fim do evento.</p><p><b>Cancelamento e reembolso:</b> Se o evento for cancelado ou sofrer alteração relevante, o comprador poderá escolher entre as opções de reembolso, crédito ou uso do ingresso em nova data, conforme as regras aplicáveis. Nas compras pela internet, também será respeitado o direito de arrependimento previsto em lei.</p></div>
+    <label class="terms-accept"><input id="terms-accepted" type="checkbox"><span>Li e concordo com os Termos de compra do ingresso.</span></label>
+    <div class="total"><span>Total</span><span id="total">R$ 10,00</span></div><button class="btn primary" id="place-order" style="width:100%">Criar pedido</button><div id="checkout-error" class="notice error hide"></div>
   </div><div id="receipt-stage" class="hide"></div></section></div>
 
   <div class="overlay" id="admin"><section class="dialog"><div class="dialog-head"><h2>Portal da organização</h2><button class="x" data-close="admin" aria-label="Fechar">×</button></div><div id="admin-login"><div class="field"><label for="admin-password">Senha do administrador</label><input id="admin-password" type="password" autocomplete="current-password"></div><button class="btn primary" id="admin-signin">Entrar</button><div id="admin-error" class="notice error hide"></div></div><div id="admin-panel" class="hide"><div class="actions" style="justify-content:flex-start;margin:0 0 18px"><button class="btn ghost" id="refresh-orders">Atualizar pedidos</button><button class="btn ghost" id="start-scanner">Abrir câmera QR</button><button class="btn ghost" id="admin-signout">Sair</button></div><div id="scanner" class="scanner-box hide"></div><div id="scan-result" class="notice hide"></div><div id="orders-list"></div></div></section></div>
@@ -75,6 +80,7 @@
     const el=id=>document.getElementById(id), money=cents=>'R$ '+(cents/100).toFixed(2).replace('.',',');
     function show(id){el(id).classList.add('show')} function hide(id){el(id).classList.remove('show')}
     document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>hide(b.dataset.close));
+     el('terms-toggle').onclick=()=>{const content=el('terms-content'),expanded=el('terms-toggle').getAttribute('aria-expanded')==='true';content.classList.toggle('hide',expanded);el('terms-toggle').setAttribute('aria-expanded',String(!expanded));el('terms-toggle').textContent=expanded?'Ler termos da compra':'Ocultar termos'};
     el('buy-open').onclick=()=>{el('checkout-stage').classList.remove('hide');el('receipt-stage').classList.add('hide');show('checkout')};
     el('admin-open').onclick=()=>show('admin');
     document.querySelectorAll('[data-type]').forEach(b=>b.onclick=()=>{ticketType=b.dataset.type;document.querySelectorAll('[data-type]').forEach(x=>x.classList.toggle('selected',x===b));el('total').textContent=money(EVENT.prices[ticketType])});
@@ -96,6 +102,7 @@
     paymentMethod='pix';
     el('place-order').onclick=async()=>{
       const err=el('checkout-error');err.classList.add('hide');
+      if(!el('terms-accepted').checked){err.textContent='Leia e aceite os Termos de compra antes de continuar.';err.classList.remove('hide');el('terms-accepted').focus();return}
       const name=el('customer-name').value.trim(),phone=el('customer-phone').value;
       if(name.length<2||phone.replace(/\D/g,'').length<10){err.textContent='Preencha seu nome e um telefone válido.';err.classList.remove('hide');return}
       const btn=el('place-order');btn.disabled=true;btn.textContent='Criando pedido PIX…';
